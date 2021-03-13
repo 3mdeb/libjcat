@@ -141,8 +141,8 @@ if get_option('pkcs7')
 endif
 
 if get_option('gpg')
-  gpgme = cc.find_library('gpgme')
-  gpgerror = cc.find_library('gpg-error')
+  gpgme = dependency('gpgme')
+  gpgerror = dependency('gpg-error')
   conf.set('ENABLE_GPG', '1')
   libjcat_deps += gpgme
   libjcat_deps += gpgerror
